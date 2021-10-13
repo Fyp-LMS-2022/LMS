@@ -1,2 +1,11 @@
+*{
+  padding: 2px;
+}
+
+
 .abc {
   background-color: green; }
+
+.wrapperLogin {
+  background-color: green;
+  padding: 6550px; }
