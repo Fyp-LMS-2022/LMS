@@ -63,3 +63,12 @@ body {
   .adminFeaturedInfo .adminTable .table {
     width: 100%;
     font-size: 60rem; }
+
+.addCourseButton {
+  position: absolute;
+  right: 1rem;
+  margin-top: 1rem; }
+
+.addCourseCard .row {
+  margin-top: 2rem;
+  padding: 1rem; }
