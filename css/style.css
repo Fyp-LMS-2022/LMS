@@ -67,8 +67,12 @@ body {
 .addCourseButton {
   position: absolute;
   right: 1rem;
-  margin-top: 1rem; }
+  margin-top: 1rem;
+  font-size: 1rem; }
 
 .addCourseCard .row {
   margin-top: 2rem;
   padding: 1rem; }
+
+.coursesRow {
+  margin-left: 4.5rem; }
