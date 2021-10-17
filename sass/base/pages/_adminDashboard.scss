@@ -1,45 +1,37 @@
 .wrapper-navabr {
-  .btn {
-    margin-right: 1rem;
-  }
-  .btn:hover {
-    color: grey;
-  }
-  .navbar-brand {
-    font-size: 1rem;
-  }
-
-  .nav-link {
-    font-size: 1rem;
-  }
+    .btn {
+        margin-right: 1rem;
+    }
+    .btn:hover {
+        color: grey;
+    }
+    .navbar-brand {
+        font-size: 1rem;
+    }
+    .nav-link {
+        font-size: 1rem;
+    }
 }
 
-.adminFeaturedInfo{
+.adminFeaturedInfo {
     font-size: 1rem;
-    
     padding: 2rem;
     margin-top: 1rem;
     text-align: center;
-
-    .card{
+    .card {
         padding: 1rem;
         width: 18rem;
         display: inline-block;
         margin-right: 1rem;
     }
-
-    .row{
+    .row {
         width: 100%;
         font-size: 1rem;
     }
-
-    .adminTable{
-        
-        .table{
+    .dataTable {
+        .table {
             width: 100%;
             font-size: 60rem;
         }
     }
-
 }
-

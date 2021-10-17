@@ -62,28 +62,28 @@
 
     <div class="row">
         <div class="col">
-            <h2>Manage Course</h2>
+            <h2>Manage Teachers</h2>
         </div>
         <div class="col">
             <a href="./src/admin/adminCourseManage.html" class="btn btn-dark addCourseButton" data-bs-toggle="modal" data-bs-target="#exampleModal"> + Add
-                Course</a>
+                teacher</a>
 
             <!-- Modal -->
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Add a course</h5>
+                            <h5 class="modal-title" id="exampleModalLabel">Add a Teacher</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                             <form class="row g-3">
                                 <div class="col-md-6">
-                                    <label for="newCoureName" class="form-label">Course Name</label>
+                                    <label for="newCoureName" class="form-label">Teacher Name</label>
                                     <input type="text" class="form-control" id="newCoureName">
                                 </div>
                                 <div class="col-md-6">
-                                    <label for="courseCode" class="form-label">Course Code</label>
+                                    <label for="courseCode" class="form-label">Teacher Qualification</label>
                                     <input type="text" class="form-control" id="courseCode">
                                 </div>
                                 <!-- <div class="col-12">
@@ -159,7 +159,7 @@
             <div class="row">
                 <div class="card ">
                     <div class="card-header">
-                        Search a course
+                        Search a Teacher
                     </div>
                     <div class="card-body">
 
@@ -179,7 +179,7 @@
                             </div>
 
                             <div class="col">
-                                <input class="form-control" type="text" placeholder="Default input" aria-label="default input example">
+                                <input class="form-control" type="text" placeholder="Enter Teacher's Name" aria-label="default input example">
 
                             </div>
                             <div class="col">
@@ -199,43 +199,84 @@
     <hr>
 
 
+
     <!-- Courses shown below -->
-    <div class="row coursesRow ">
-        <div class="col col-lg-4">
-            <div class="card text-white bg-secondary mb-3" style="width: 18rem; text-align: center;">
-
-                <img src="../../img/html.png" class="card-img-top" />
-
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-dark">Edit COurse</a>
-                </div>
-            </div>
-        </div>
-        <div class="col col-lg-4">
-            <div class="card text-white bg-secondary mb-3" style="width: 18rem; text-align: center;">
-                <img src="../../img/nodejs.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-dark">Edit COurse</a>
-                </div>
-            </div>
-        </div>
-        <div class="col col-lg-4">
-            <div class="card text-white bg-secondary mb-3" style="width: 18rem; text-align: center;">
-                <img src="../../img/react.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-dark">Edit COurse</a>
-                </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Program</th>
+                            <th scope="col">Enrollment</th>
+                            <th scope="col">Semester</th>
+                            <th scope="col">E-mail</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>CS</td>
+                            <td>02-134181-147</td>
+                            <td><span>8</span></td>
+                            <td>abc@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>CS</td>
+                            <td>02-134181-147</td>
+                            <td><span>8</span></td>
+                            <td>abc@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>CS</td>
+                            <td>02-134181-147</td>
+                            <td><span>8</span></td>
+                            <td>abc@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>CS</td>
+                            <td>02-134181-147</td>
+                            <td><span>8</span></td>
+                            <td>abc@gmail.com</td>>
+                        </tr>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>CS</td>
+                            <td>02-134181-147</td>
+                            <td><span>8</span></td>
+                            <td>abc@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>CS</td>
+                            <td>02-134181-147</td>
+                            <td><span>8</span></td>
+                            <td>abc@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>CS</td>
+                            <td>02-134181-147</td>
+                            <td><span>8</span></td>
+                            <td>abc@gmail.com</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
-    <br><br>
-
 
 
 
