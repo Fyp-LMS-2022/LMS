@@ -1,26 +1,50 @@
-.wrapper {
-  height: 100vh;
-  width: 100vw;
-  position: relative; }
-  .wrapperLogin {
-    padding: 2rem;
-    font-size: 1rem;
-    color: #fff;
-    border-radius: 1rem;
-    height: 30rem;
-    width: 40rem;
-    background-color: rgba(33, 37, 41, 0.8);
-    position: absolute;
-    transform: translate(55%, 10%); }
+.adminlogin-wrapper {
+  border: 1px solid black;
+  border: dotted;
+  padding: 5rem;
+  z-index: -9000;
+  background-position: right; }
 
-.btn {
-  font-size: 1rem; }
+.adminlogin-col {
+  border: 2px solid black;
+  border-radius: 1rem;
+  padding-top: 2rem;
+  height: 25rem;
+  box-shadow: 18px 20px 45px -17px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 18px 20px 45px -17px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 18px 20px 45px -17px rgba(0, 0, 0, 0.75); }
 
-.dropdown-item {
-  font-size: 1rem; }
+.studentlogin-wrapper {
+  border: 1px solid black;
+  border: dotted;
+  padding: 5rem;
+  z-index: -9000;
+  background-position: right; }
 
-.form-text {
-  color: rgba(247, 247, 247, 0.5); }
+.studentlogin-col {
+  border: 2px solid black;
+  border-radius: 1rem;
+  padding-top: 2rem;
+  height: 25rem;
+  box-shadow: 18px 20px 45px -17px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 18px 20px 45px -17px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 18px 20px 45px -17px rgba(0, 0, 0, 0.75); }
+
+.teacherlogin-wrapper {
+  border: 1px solid black;
+  border: dotted;
+  padding: 5rem;
+  z-index: -9000;
+  background-position: right; }
+
+.teacherlogin-col {
+  border: 2px solid black;
+  border-radius: 1rem;
+  padding-top: 2rem;
+  height: 25rem;
+  box-shadow: 18px 20px 45px -17px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 18px 20px 45px -17px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 18px 20px 45px -17px rgba(0, 0, 0, 0.75); }
 
 *,
 *::after,
@@ -43,6 +67,15 @@ a {
 a:visited {
   color: white;
   display: block; }
+
+.form-check-input {
+  background-color: white; }
+
+.form-check-input::after {
+  background-color: black; }
+
+.form-check-input:active {
+  background-color: white; }
 
 .wrapper-navabr .btn {
   margin-right: 1rem; }

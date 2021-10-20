@@ -24,3 +24,15 @@ a:visited {
     color: white;
     display: block;
 }
+
+.form-check-input {
+    background-color: white;
+}
+
+.form-check-input::after {
+    background-color: black;
+}
+
+.form-check-input:active {
+    background-color: white;
+}
