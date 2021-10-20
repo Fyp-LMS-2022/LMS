@@ -1,21 +1,14 @@
-.heading-primary{
+.heading-primary {
     color: $color-white;
-
-    &--main{
+    &--main {
         display: block;
         font-size: 6rem;
         font-weight: 400;
         letter-spacing: 3.2rem;
         animation-name: moveInRight;
         animation-duration: 2000ms;
-
-
-        @include respond(phone){
-            font-size: 3rem;
-            letter-spacing: 2.5rem;
-         }
     }
-    &--sub{
+    &--sub {
         display: block;
         font-size: 2rem;
         font-weight: 400;
@@ -23,16 +16,10 @@
         animation-name: moveInLeft;
         animation-duration: 2000ms;
         margin-bottom: 3rem;
-
-        @include respond(phone){
-            font-size: 2rem;
-            letter-spacing: 1rem;
-         }
     }
 }
 
-
-.heading-secondary{
+.heading-secondary {
     font-size: 3.5rem;
     text-transform: uppercase;
     font-weight: 700;
@@ -42,48 +29,31 @@
     color: transparent;
     letter-spacing: .2rem;
     transition: all .2s;
-
-    @include respond(tab-port)
-    {
-        font-size: 2.5rem;
-        letter-spacing: .1rem;
-    }
-
-    @include respond(tab-land)
-    {
-        font-size: 2.5rem;
-        letter-spacing: .1rem;
-    }
-
-    &:hover{
+    &:hover {
         transform: skewY(10deg);
         text-shadow: 0.5rem 1rem 2rem $color-primary-light;
-
     }
 }
 
-
-.heading-third{
+.heading-third {
     font-size: 1.6rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
 }
-.paragraph{
+
+.paragraph {
     font-size: 1.6rem;
     font-weight: 300;
     text-transform: uppercase;
-
-    &:not(:last-child)
-    {
+    &:not(:last-child) {
         margin-bottom: 2rem;
     }
 }
-body{
+
+body {
     font-family: "Lato", sans-serif;
     font-weight: 400;
     line-height: 1.7;
     color: $color-grey;
-    
-
 }

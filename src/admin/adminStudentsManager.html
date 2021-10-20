@@ -66,25 +66,29 @@
         </div>
         <div class="col">
             <a href="./src/admin/adminCourseManage.html" class="btn btn-dark addCourseButton" data-bs-toggle="modal" data-bs-target="#exampleModal"> + Add
-                teacher</a>
+                Student</a>
 
             <!-- Modal -->
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Add a Teacher</h5>
+                            <h5 class="modal-title" id="exampleModalLabel">Add a Student</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="modal-body">
+                        <div class="modal-body addStudent">
                             <form class="row g-3">
                                 <div class="col-md-6">
-                                    <label for="newCoureName" class="form-label">Teacher Name</label>
-                                    <input type="text" class="form-control" id="newCoureName">
+                                    <label for="addStudent-Name" class="form-label">Student Name</label>
+                                    <input type="text" class="form-control" id="addStudent-Name">
                                 </div>
                                 <div class="col-md-6">
-                                    <label for="courseCode" class="form-label">Teacher Qualification</label>
-                                    <input type="text" class="form-control" id="courseCode">
+                                    <label for="addStudent-FatherName" class="form-label">Father Name</label>
+                                    <input type="text" class="form-control" id="addStudent-FatherName">
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="addStudent-address" class="form-label">Address</label>
+                                    <input type="text" class="form-control" id="addStudent-address">
                                 </div>
                                 <!-- <div class="col-12">
                                     <label for="inputAddress" class="form-label">Address</label>
@@ -95,30 +99,31 @@
                                     <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
                                 </div> -->
                                 <div class="col-md-6">
-                                    <label for="instructor" class="form-label">Instructor</label>
-                                    <input type="text" class="form-control" id="instructor">
+                                    <label for="addStudent-dob" class="form-label">Date of birth</label>
+                                    <input type="date" class="form-control" id="addStudent-dob">
                                 </div>
-                                <div class="col-md-6">
-                                    <label for="inputState" class="form-label">Credit Hours</label>
-                                    <select id="inputState" class="form-select">
-                                    <option selected>1</option>
-                                    <option>2</option>
-                                    <option>2+1</option>
-                                    <option>3</option>
-                                  </select>
+                                <div class="col-md-6 ">
+                                    <label for="addStudent-email" class="form-label ">Email</label>
+                                    <input class="form-control" type="email" id="addStudent-email" pattern=".+@globex\.com" required>
+
                                 </div>
-                                <div class="col-md-6">
-                                    <label for="inputState" class="form-label">Program</label>
-                                    <select id="inputState" class="form-select">
+                                <div class=" col-md-6 ">
+                                    <label for="addStudent-email " class="form-label ">Mobile Number</label>
+                                    <input class="form-control" type="tel" id="addStudent-email" name="phone" pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}" required>
+
+                                </div>
+                                <div class="col-md-6 ">
+                                    <label for="addStudent-program " class="form-label ">Program</label>
+                                    <select id="addStudent-program " class="form-select ">
                                     <option selected>CS</option>
                                     <option>BBA</option>
                                     <option>CE</option>
                                     <option>SE</option>
                                   </select>
                                 </div>
-                                <div class="col-md-6">
-                                    <label for="inputState" class="form-label">Semester</label>
-                                    <select id="inputState" class="form-select">
+                                <div class="col-md-6 ">
+                                    <label for="addStudent-semester " class="form-label ">Semester</label>
+                                    <select id="addStudent-semester " class="form-select ">
                                     <option selected>1</option>
                                     <option>2</option>
                                     <option>3</option>
@@ -129,57 +134,57 @@
                                     <option>8</option>
                                   </select>
                                 </div>
-                                <!-- <div class="col-md-2">
-                                    <label for="inputZip" class="form-label">Zip</label>
-                                    <input type="text" class="form-control" id="inputZip">
+                                <!-- <div class="col-md-2 ">
+                                    <label for="inputZip " class="form-label ">Zip</label>
+                                    <input type="text " class="form-control " id="inputZip ">
                                 </div> -->
-                                <!-- <div class="col-12">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="gridCheck">
-                                        <label class="form-check-label" for="gridCheck">
+                                <!-- <div class="col-12 ">
+                                    <div class="form-check ">
+                                        <input class="form-check-input " type="checkbox " id="gridCheck ">
+                                        <label class="form-check-label " for="gridCheck ">
                                       Check me out
                                     </label>
                                     </div>
                                 </div>
-                                <div class="col-12">
-                                    <button type="submit" class="btn btn-primary">Sign in</button>
+                                <div class="col-12 ">
+                                    <button type="submit " class="btn btn-primary ">Sign in</button>
                                 </div> -->
                             </form>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-dark">Save changes</button>
+                        <div class="modal-footer ">
+                            <button type="button " class="btn btn-light " data-bs-dismiss="modal ">Close</button>
+                            <button type="button " class="btn btn-dark ">Save changes</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="addCourseCard">
-            <div class="row">
+        <div class="addCourseCard ">
+            <div class="row ">
                 <div class="card ">
-                    <div class="card-header">
+                    <div class="card-header ">
                         Search a Teacher
                     </div>
-                    <div class="card-body">
+                    <div class="card-body ">
 
-                        <div class="row">
-                            <div class="col-md-auto">
-                                <div class="dropdown">
-                                    <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <div class="row ">
+                            <div class="col-md-auto ">
+                                <div class="dropdown ">
+                                    <button class="btn btn-dark dropdown-toggle " type="button " id="dropdownMenuButton1 " data-bs-toggle="dropdown " aria-expanded="false ">
                                         Filter
                                     </button>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                        <li><a class="dropdown-item" href="#">Action</a></li>
-                                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    <ul class="dropdown-menu " aria-labelledby="dropdownMenuButton1 ">
+                                        <li><a class="dropdown-item " href="# ">Action</a></li>
+                                        <li><a class="dropdown-item " href="# ">Another action</a></li>
+                                        <li><a class="dropdown-item " href="# ">Something else here</a></li>
                                     </ul>
                                 </div>
 
                             </div>
 
-                            <div class="col">
-                                <input class="form-control" type="text" placeholder="Enter Teacher's Name" aria-label="default input example">
+                            <div class="col ">
+                                <input class="form-control " type="text " placeholder="Enter Teacher 's Name" aria-label="default input example">
 
                             </div>
                             <div class="col">
@@ -204,7 +209,7 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <table class="table">
+                <table class="table" id="adminStudentsTable">
                     <thead>
                         <tr>
                             <th scope="col">#</th>

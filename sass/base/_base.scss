@@ -1,16 +1,26 @@
-*, *::after, *::before{
+*,
+*::after,
+*::before {
     margin: 0;
     padding: 0;
     box-sizing: inherit;
 }
-html{
+
+html {
     font-size: 100%;
 }
-  
-body{
 
+body {
     box-sizing: border-box;
     overflow-x: hidden;
     padding: 1rem;
+}
 
+a {
+    color: white;
+}
+
+a:visited {
+    color: white;
+    display: block;
 }
