@@ -171,3 +171,16 @@ a:visited {
       position: absolute;
       z-index: 1000;
       transform: translate(200%, 250%); }
+
+.addTeacherButton {
+  position: absolute;
+  right: 1rem;
+  margin-top: 1rem;
+  font-size: 1rem; }
+
+.addTeacherCard .row {
+  margin-top: 2rem;
+  padding: 1rem; }
+
+.coursesRow {
+  margin-left: 4.5rem; }

@@ -21,7 +21,7 @@
         <nav>
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#">FYP LMS 2022</a>
+                    <a class="navbar-brand" href="./adminDashboard.html">FYP LMS 2022</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -64,27 +64,41 @@
         <div class="col">
             <h2>Manage Teachers</h2>
         </div>
+
         <div class="col">
-            <a href="./src/admin/adminCourseManage.html" class="btn btn-dark addCourseButton" data-bs-toggle="modal" data-bs-target="#exampleModal"> + Add
+            <a href="./src/admin/adminCourseManage.html" class="btn btn-dark addTeacherButton" data-bs-toggle="modal" data-bs-target="#newTeacherModal"> + Add
                 teacher</a>
 
             <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal fade" id="newTeacherModal" tabindex="-1">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Add a Teacher</h5>
+                            <h5 class="modal-title" id="NewTeacherModalLabel">Add a Teacher</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <form class="row g-3">
+
+                            <!-- //////////////////////////////////     -->
+                            <!-- Add Teacher Form -->
+
+                            <form class="row g-3" onsubmit="onFormSubmit();">
                                 <div class="col-md-6">
-                                    <label for="newCoureName" class="form-label">Teacher Name</label>
-                                    <input type="text" class="form-control" id="newCoureName">
+                                    <label for="newTeacherName" class="form-label">Teacher Name</label>
+                                    <input type="text" class="form-control" id="newTeacherName">
                                 </div>
                                 <div class="col-md-6">
-                                    <label for="courseCode" class="form-label">Teacher Qualification</label>
-                                    <input type="text" class="form-control" id="courseCode">
+                                    <label for="teacherProgram" class="form-label">Program</label>
+                                    <select id="teacherProgram" class="form-select">
+                                    <option selected>CS</option>
+                                    <option>BBA</option>
+                                    <option>CE</option>
+                                    <option>SE</option>
+                                  </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="teacherQualification" class="form-label">Teacher Qualification</label>
+                                    <input type="text" class="form-control" id="teacherQualification">
                                 </div>
                                 <!-- <div class="col-12">
                                     <label for="inputAddress" class="form-label">Address</label>
@@ -94,31 +108,36 @@
                                     <label for="inputAddress2" class="form-label">Address 2</label>
                                     <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
                                 </div> -->
-                                <div class="col-md-6">
+                                <!-- <div class="col-md-6">
                                     <label for="instructor" class="form-label">Instructor</label>
                                     <input type="text" class="form-control" id="instructor">
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="inputState" class="form-label">Credit Hours</label>
-                                    <select id="inputState" class="form-select">
+                                </div> -->
+                                <!-- <div class="col-md-6">
+                                    <label for="teacherCreditHours" class="form-label">Credit Hours</label>
+                                    <select id="teacherCreditHours" class="form-select">
                                     <option selected>1</option>
                                     <option>2</option>
                                     <option>2+1</option>
                                     <option>3</option>
                                   </select>
-                                </div>
+                                </div> -->
+
                                 <div class="col-md-6">
-                                    <label for="inputState" class="form-label">Program</label>
-                                    <select id="inputState" class="form-select">
-                                    <option selected>CS</option>
-                                    <option>BBA</option>
-                                    <option>CE</option>
-                                    <option>SE</option>
+                                    <label for="teacherCourse" class="form-label">Course</label>
+                                    <select id="teacherCourse" class="form-select">
+                                    <option selected>HTML</option>
+                                    <option>React</option>
+                                    <option>DLD</option>
+                                    <option>Ai</option>
                                   </select>
                                 </div>
                                 <div class="col-md-6">
-                                    <label for="inputState" class="form-label">Semester</label>
-                                    <select id="inputState" class="form-select">
+                                    <label for="teacherEmail" class="form-label">Teacher Email</label>
+                                    <input type="email" class="form-control" id="teacherEmail">
+                                </div>
+                                <!-- <div class="col-md-6">
+                                    <label for="teacherSemester" class="form-label">Semester</label>
+                                    <select id="teacherSemester" class="form-select">
                                     <option selected>1</option>
                                     <option>2</option>
                                     <option>3</option>
@@ -128,7 +147,7 @@
                                     <option>7</option>
                                     <option>8</option>
                                   </select>
-                                </div>
+                                </div> -->
                                 <!-- <div class="col-md-2">
                                     <label for="inputZip" class="form-label">Zip</label>
                                     <input type="text" class="form-control" id="inputZip">
@@ -148,14 +167,14 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-dark">Save changes</button>
+                            <input type="submit" value="submit" class="btn btn-dark" id="teacherSubmitBUtton" onclick="onFormSubmit()"> </input>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="addCourseCard">
+        <div class="addTeacherCard">
             <div class="row">
                 <div class="card ">
                     <div class="card-header">
@@ -203,19 +222,21 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <table class="table">
+                <table class="table" id="teachersList">
                     <thead>
                         <tr>
-                            <th scope="col">#</th>
+                            <!-- <th scope="col">#</th> -->
                             <th scope="col">Name</th>
                             <th scope="col">Program</th>
                             <th scope="col">Qualification</th>
                             <th scope="col">Current Courses</th>
                             <th scope="col">E-mail</th>
+                            <th scope="col"></th>
+                            <th scope="col"></th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <!-- <tr>
                             <th scope="row">1</th>
                             <td>Mark</td>
                             <td>CS</td>
@@ -270,7 +291,7 @@
                             <td>Phd</td>
                             <td><span>CSE-120</span></td>
                             <td>abc@gmail.com</td>
-                        </tr>
+                        </tr> -->
                     </tbody>
                 </table>
             </div>
