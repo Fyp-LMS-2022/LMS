@@ -112,6 +112,11 @@
                                     <input class="form-control" type="tel" id="addStudent-email" name="phone" pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}" required>
 
                                 </div>
+                                <div class=" col-md-6 ">
+                                    <label for="addStudent-enrollment " class="form-label ">Enrollment</label>
+                                    <input class="form-control" id="addStudent-enrollment" name="enrollment" required>
+
+                                </div>
                                 <div class="col-md-6 ">
                                     <label for="addStudent-program " class="form-label ">Program</label>
                                     <select id="addStudent-program " class="form-select ">
@@ -119,6 +124,15 @@
                                     <option>BBA</option>
                                     <option>CE</option>
                                     <option>SE</option>
+                                  </select>
+                                </div>
+                                <div class="col-md-6 ">
+                                    <label for="addStudent-courseCode " class="form-label ">Course Code</label>
+                                    <select id="addStudent-courseCode " class="form-select ">
+                                        <option selected>CEN-221</option>
+                                        <option>SEN-121</option>
+                                        <option>EE-321</option>
+                                        <option>CEN-654</option>
                                   </select>
                                 </div>
                                 <div class="col-md-6 ">
@@ -152,7 +166,7 @@
                             </form>
                         </div>
                         <div class="modal-footer ">
-                            <button type="button " class="btn btn-light " data-bs-dismiss="modal ">Close</button>
+                            <button type="button " class="btn btn-light " data-bs-dismiss="modal">Close</button>
                             <button type="button " class="btn btn-dark ">Save changes</button>
                         </div>
                     </div>
