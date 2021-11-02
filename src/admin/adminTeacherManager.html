@@ -82,14 +82,14 @@
                             <!-- //////////////////////////////////     -->
                             <!-- Add Teacher Form -->
 
-                            <form class="row g-3" onsubmit="onFormSubmit();">
+                            <form class="row g-3" onsubmit="onNewTeacherFormSubmit();">
                                 <div class="col-md-6">
                                     <label for="newTeacherName" class="form-label">Teacher Name</label>
                                     <input type="text" class="form-control" id="newTeacherName">
                                 </div>
                                 <div class="col-md-6">
-                                    <label for="teacherProgram" class="form-label">Program</label>
-                                    <select id="teacherProgram" class="form-select">
+                                    <label for="newteacherProgram" class="form-label">Program</label>
+                                    <select id="newteacherProgram" class="form-select">
                                     <option selected>CS</option>
                                     <option>BBA</option>
                                     <option>CE</option>
@@ -97,12 +97,12 @@
                                   </select>
                                 </div>
                                 <div class="col-md-6">
-                                    <label for="teacherUsername" class="form-label">Teacher's Username</label>
-                                    <input type="text" class="form-control" id="teacherUsername">
+                                    <label for="newteacherUsername" class="form-label">Teacher's Username</label>
+                                    <input type="text" class="form-control" id="newteacherUsername">
                                 </div>
                                 <div class="col-md-6">
-                                    <label for="teacherPassword" class="form-label">Teacher's Password</label>
-                                    <input type="text" class="form-control" id="teacherPassword">
+                                    <label for="newteacherPassword" class="form-label">Teacher's Password</label>
+                                    <input type="password" class="form-control" id="newteacherPassword">
                                 </div>
                                 <!-- <div class="col-12">
                                     <label for="inputAddress" class="form-label">Address</label>
@@ -127,8 +127,8 @@
                                 </div> -->
 
                                 <div class="col-md-6">
-                                    <label for="teacherCourseCode" class="form-label">Course Code</label>
-                                    <select id="teacherCourseCode" class="form-select">
+                                    <label for="newteacherCourseCode" class="form-label">Course Code</label>
+                                    <select id="newteacherCourseCode" class="form-select">
                                     <option selected>CEN-221</option>
                                     <option>SEN-121</option>
                                     <option>EE-321</option>
@@ -171,7 +171,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
-                            <input type="submit" value="submit" class="btn btn-dark" id="teacherSubmitBUtton" onclick="onFormSubmit()"> </input>
+                            <input type="submit" value="submit" class="btn btn-dark" id="teacherSubmitBUtton" onclick="onNewTeacherFormSubmit()"> </input>
                         </div>
                     </div>
                 </div>
@@ -231,10 +231,10 @@
                         <tr>
                             <!-- <th scope="col">#</th> -->
                             <th scope="col">Name</th>
+                            <th scope="col">Username</th>
+                            <th scope="col">Password</th>
                             <th scope="col">Program</th>
-                            <th scope="col">Qualification</th>
-                            <th scope="col">Current Courses</th>
-                            <th scope="col">E-mail</th>
+                            <th scope="col">Current Course Code</th>
                             <th scope="col"></th>
                             <th scope="col"></th>
                         </tr>

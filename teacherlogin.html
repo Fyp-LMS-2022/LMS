@@ -14,25 +14,32 @@
 
 <body>
     <div class="container-fluid teacherlogin">
-        <div class="row teacherlogin-row teacherlogin-wrapper">
-            <div class="col-sm-4 teacherlogin-col mx-auto ">
+        <div class="row adminlogin-row adminlogin-wrapper">
+            <h3>Teacher Login</h3>
+            <div class="col-sm-4 adminlogin-col mx-auto ">
                 <form>
-                    <div class="form-group teacherlogin-form">
-                        <label for="teacherLogin-email">Email address</label>
-                        <input type="email" class="form-control" id="teacherLogin-email" aria-describedby="emailHelp" placeholder="Enter email">
+
+
+                    <div class="form-group teacherlogin-form mb-4">
+                        <label for="teacherLogin-username">Username</label>
+                        <input type="email" class="form-control" id="teacherLogin-username" aria-describedby="emailHelp" placeholder="Enter Username">
 
                     </div>
-                    <div class="form-group teacherlogin-form mt-2">
-                        <label for="teacherLogin-password">Password</label>
-                        <input type="password" class="form-control" id="teacherLogin-password" placeholder="Password">
+                    <div class="form-group adminlogin-form mb-4">
+                        <label for="adminLogin-password">Password</label>
+                        <input type="password" class="form-control" id="adminLogin-password" placeholder="Password">
                     </div>
-                    <!-- <div class="form-group teacherlogin-form mt-2">
-                        <input type="checkbox" class="form-check-input" id="teacherLogin-checkbox">
-                        <label class="form-check-label" for="teacherLogin-checkbox">Check me out</label>
+                    <!-- <div class="form-group adminlogin-form mt-2">
+                        <input type="checkbox" class="form-check-input" id="adminLogin-checkbox">
+                        <label class="form-check-label" for="adminLogin-checkbox">Check me out</label>
                     </div> -->
-                    <div class="form-group  mt-2">
-                        <button type="button" class="mt-4 btn btn-dark  btn-block mb-4">Sign In</button>
+
+                    <div class="form-group d-grid gap-2 mb-4 ">
+
+                        <a type="button" class="mt-4 btn btn-dark  btn-block mb-4" href="./src/instructor/instructorDashboard.html">Sign In</a>
                     </div>
+
+
 
                 </form>
             </div>

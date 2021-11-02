@@ -28,13 +28,13 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="../admin/adminCourseManage.html">Courses</a>
+                                <a class="nav-link" aria-current="page" href="./admincoursemanagement">Courses</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="./adminTeacherManager.html">Teachers</a>
+                                <a class="nav-link" href="./adminteachermanagement">Teachers</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="./adminStudentsManager.html">Students</a>
+                                <a class="nav-link" href="./adminstudentmanagement">Students</a>
                             </li>
                         </ul>
                         <form class="d-flex">
@@ -59,13 +59,12 @@
     <!-- navbar ended -->
 
     <!-- Main body -->
-
     <div class="row">
         <div class="col">
-            <h2>Manage Teachers</h2>
+            <h2>Manage Students</h2>
         </div>
         <div class="col">
-            <a href="./src/admin/adminCourseManage.html" class="btn btn-dark addCourseButton" data-bs-toggle="modal" data-bs-target="#exampleModal"> + Add
+            <a href="./admincoursemanagement" class="btn btn-dark addCourseButton" data-bs-toggle="modal" data-bs-target="#exampleModal"> + Add
                 Student</a>
 
             <!-- Modal -->
@@ -77,67 +76,34 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body addStudent">
-                            <form class="row g-3">
+
+
+                            <form class="row g-3" onsubmit="onNewStudentFormSubmit();">
                                 <div class="col-md-6">
                                     <label for="addStudent-Name" class="form-label">Student Name</label>
-                                    <input type="text" class="form-control" id="addStudent-Name">
+                                    <input type="text" class="form-control" id="addStudent-Name" name="studentname">
                                 </div>
-                                <div class="col-md-6">
-                                    <label for="addStudent-FatherName" class="form-label">Father Name</label>
-                                    <input type="text" class="form-control" id="addStudent-FatherName">
-                                </div>
-                                <div class="col-md-12">
-                                    <label for="addStudent-address" class="form-label">Address</label>
-                                    <input type="text" class="form-control" id="addStudent-address">
-                                </div>
-                                <!-- <div class="col-12">
-                                    <label for="inputAddress" class="form-label">Address</label>
-                                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-                                </div>
-                                <div class="col-12">
-                                    <label for="inputAddress2" class="form-label">Address 2</label>
-                                    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-                                </div> -->
-                                <div class="col-md-6">
-                                    <label for="addStudent-dob" class="form-label">Date of birth</label>
-                                    <input type="date" class="form-control" id="addStudent-dob">
-                                </div>
+
                                 <div class="col-md-6 ">
                                     <label for="addStudent-email" class="form-label ">Email</label>
-                                    <input class="form-control" type="email" id="addStudent-email" pattern=".+@globex\.com" required>
+                                    <input class="form-control" type="email" id="addStudent-email" required name="semail">
 
                                 </div>
-                                <div class=" col-md-6 ">
-                                    <label for="addStudent-email " class="form-label ">Mobile Number</label>
-                                    <input class="form-control" type="tel" id="addStudent-email" name="phone" pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}" required>
 
-                                </div>
                                 <div class=" col-md-6 ">
                                     <label for="addStudent-enrollment " class="form-label ">Enrollment</label>
                                     <input class="form-control" id="addStudent-enrollment" name="enrollment" required>
 
                                 </div>
-                                <div class="col-md-6 ">
-                                    <label for="addStudent-program " class="form-label ">Program</label>
-                                    <select id="addStudent-program " class="form-select ">
-                                    <option selected>CS</option>
-                                    <option>BBA</option>
-                                    <option>CE</option>
-                                    <option>SE</option>
-                                  </select>
+                                <div class="col-md-6">
+                                    <label for="addStudent-Password" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="addStudent-Password" name="spassword">
                                 </div>
+
+
                                 <div class="col-md-6 ">
-                                    <label for="addStudent-courseCode " class="form-label ">Course Code</label>
-                                    <select id="addStudent-courseCode " class="form-select ">
-                                        <option selected>CEN-221</option>
-                                        <option>SEN-121</option>
-                                        <option>EE-321</option>
-                                        <option>CEN-654</option>
-                                  </select>
-                                </div>
-                                <div class="col-md-6 ">
-                                    <label for="addStudent-semester " class="form-label ">Semester</label>
-                                    <select id="addStudent-semester " class="form-select ">
+                                    <label for="addStudent-semester" class="form-label ">Semester</label>
+                                    <select id="addStudent-semester" class="form-select " name="ssemester">
                                     <option selected>1</option>
                                     <option>2</option>
                                     <option>3</option>
@@ -148,70 +114,147 @@
                                     <option>8</option>
                                   </select>
                                 </div>
-                                <!-- <div class="col-md-2 ">
-                                    <label for="inputZip " class="form-label ">Zip</label>
-                                    <input type="text " class="form-control " id="inputZip ">
-                                </div> -->
-                                <!-- <div class="col-12 ">
-                                    <div class="form-check ">
-                                        <input class="form-check-input " type="checkbox " id="gridCheck ">
-                                        <label class="form-check-label " for="gridCheck ">
-                                      Check me out
-                                    </label>
-                                    </div>
+                                <div class="col-md-6 ">
+                                    <label for="addStudent-program" class="form-label ">Program</label>
+                                    <select id="addStudent-program" class="form-select " name="sprogram">
+                                    <option selected>CS</option>
+                                    <option>BBA</option>
+                                    <option>CE</option>
+                                    <option>SE</option>
+                                  </select>
                                 </div>
-                                <div class="col-12 ">
-                                    <button type="submit " class="btn btn-primary ">Sign in</button>
-                                </div> -->
                             </form>
+
+
                         </div>
                         <div class="modal-footer ">
                             <button type="button " class="btn btn-light " data-bs-dismiss="modal">Close</button>
-                            <button type="button " class="btn btn-dark ">Save changes</button>
+                            <button type="submit " value="submit" class="btn btn-dark " onclick="onNewStudentFormSubmit()">Save changes</button>
+
                         </div>
+
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="addCourseCard ">
-            <div class="row ">
-                <div class="card ">
-                    <div class="card-header ">
-                        Search a Teacher
-                    </div>
-                    <div class="card-body ">
 
-                        <div class="row ">
-                            <div class="col-md-auto ">
-                                <div class="dropdown ">
-                                    <button class="btn btn-dark dropdown-toggle " type="button " id="dropdownMenuButton1 " data-bs-toggle="dropdown " aria-expanded="false ">
+        <!-- /////////////////////////////////////////////////////////////////////////////// -->
+        <!-- Course Assign Modal -->
+
+        <div class="modal fade" id="courseAssignModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Add a Student</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body addStudent">
+
+
+                        <form class="row g-3" onsubmit="onNewStudentFormSubmit();">
+                            <div class="col-md-6">
+                                <label for="addStudent-Name" class="form-label">Student Name</label>
+                                <input type="text" class="form-control" id="addStudent-Name" name="studentname">
+                            </div>
+
+                            <div class="col-md-6 ">
+                                <label for="addStudent-email" class="form-label ">Email</label>
+                                <input class="form-control" type="email" id="addStudent-email" required name="semail">
+
+                            </div>
+
+                            <div class=" col-md-6 ">
+                                <label for="addStudent-enrollment " class="form-label ">Enrollment</label>
+                                <input class="form-control" id="addStudent-enrollment" name="enrollment" required>
+
+                            </div>
+                            <div class="col-md-6">
+                                <label for="addStudent-Password" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="addStudent-Password" name="spassword">
+                            </div>
+
+
+                            <!-- <div class="col-md-6 ">
+                                <label for="addStudent-semester" class="form-label ">Semester</label>
+                                <select id="addStudent-semester" class="form-select " name="ssemester">
+                        <option selected>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                      </select>
+                            </div>
+                            <div class="col-md-6 ">
+                                <label for="addStudent-program" class="form-label ">Program</label>
+                                <select id="addStudent-program" class="form-select " name="sprogram">
+                        <option selected>CS</option>
+                        <option>BBA</option>
+                        <option>CE</option>
+                        <option>SE</option>
+                      </select>
+                            </div> -->
+                        </form>
+
+
+                    </div>
+                    <div class="modal-footer ">
+                        <button type="button " class="btn btn-light " data-bs-dismiss="modal">Close</button>
+                        <button type="submit " value="submit" class="btn btn-dark " onclick="onNewStudentFormSubmit()">Save changes</button>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- /////////////////////////////////////////////////////////////////////////////// -->
+    <!-- Course Assign Modal Ended-->
+
+
+
+    <div class="addCourseCard ">
+        <div class="row ">
+            <div class="card ">
+                <div class="card-header ">
+                    Search a Student
+                </div>
+                <div class="card-body ">
+
+                    <div class="row ">
+                        <div class="col-md-auto ">
+                            <div class="dropdown ">
+                                <button class="btn btn-dark dropdown-toggle " type="button " id="dropdownMenuButton1 " data-bs-toggle="dropdown " aria-expanded="false ">
                                         Filter
                                     </button>
-                                    <ul class="dropdown-menu " aria-labelledby="dropdownMenuButton1 ">
-                                        <li><a class="dropdown-item " href="# ">Action</a></li>
-                                        <li><a class="dropdown-item " href="# ">Another action</a></li>
-                                        <li><a class="dropdown-item " href="# ">Something else here</a></li>
-                                    </ul>
-                                </div>
-
+                                <ul class="dropdown-menu " aria-labelledby="dropdownMenuButton1 ">
+                                    <li><a class="dropdown-item " href="# ">Action</a></li>
+                                    <li><a class="dropdown-item " href="# ">Another action</a></li>
+                                    <li><a class="dropdown-item " href="# ">Something else here</a></li>
+                                </ul>
                             </div>
 
-                            <div class="col ">
-                                <input class="form-control " type="text " placeholder="Enter Teacher 's Name" aria-label="default input example">
-
-                            </div>
-                            <div class="col">
-
-                                <a href="./src/admin/adminCourseManage.html" class="btn btn-dark courseSearchButton">
-                                    <i class="fas fa-search fa-1x"></i></a>
-                            </div>
                         </div>
 
+                        <div class="col ">
+                            <input class="form-control " type="text " placeholder="Enter Student's Name" aria-label="default input example">
+
+                        </div>
+                        <div class="col">
+
+                            <a href="./admincoursemanagement" class="btn btn-dark courseSearchButton">
+                                <i class="fas fa-search fa-1x"></i></a>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </div>
+    </div>
     </div>
     </div>
 
@@ -226,71 +269,27 @@
                 <table class="table" id="adminStudentsTable">
                     <thead>
                         <tr>
-                            <th scope="col">#</th>
+
                             <th scope="col">Name</th>
-                            <th scope="col">Program</th>
+                            <th scope="col">Email</th>
                             <th scope="col">Enrollment</th>
+                            <th scope="col">Password</th>
                             <th scope="col">Semester</th>
-                            <th scope="col">E-mail</th>
+                            <th scope="col">Program</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <!-- <tr>
                             <th scope="row">1</th>
                             <td>Mark</td>
-                            <td>CS</td>
+                            <td>mark@gmail.com</td>
                             <td>02-134181-147</td>
-                            <td><span>8</span></td>
-                            <td>abc@gmail.com</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
+                            <td><span>********</span></td>
+                            <td>6</td>
                             <td>CS</td>
-                            <td>02-134181-147</td>
-                            <td><span>8</span></td>
-                            <td>abc@gmail.com</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>CS</td>
-                            <td>02-134181-147</td>
-                            <td><span>8</span></td>
-                            <td>abc@gmail.com</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>CS</td>
-                            <td>02-134181-147</td>
-                            <td><span>8</span></td>
-                            <td>abc@gmail.com</td>>
-                        </tr>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>CS</td>
-                            <td>02-134181-147</td>
-                            <td><span>8</span></td>
-                            <td>abc@gmail.com</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>CS</td>
-                            <td>02-134181-147</td>
-                            <td><span>8</span></td>
-                            <td>abc@gmail.com</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>CS</td>
-                            <td>02-134181-147</td>
-                            <td><span>8</span></td>
-                            <td>abc@gmail.com</td>
-                        </tr>
+                        </tr> -->
+
+
                     </tbody>
                 </table>
             </div>
